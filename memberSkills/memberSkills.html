@@ -1,0 +1,40 @@
+<template>
+  <lightning-card
+    title="Member Skill"
+    icon-name="standard:account"
+    variant="Narrow"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-input
+        name="Name"
+        label="Name"
+        placeholder="Name"
+        required
+        onchange={handleChange}
+      >
+      </lightning-input>
+      <lightning-combobox
+        name="Team"
+        label="Team"
+        placeholder="Choose Team"
+        value={value}
+        onchange={handleChange}
+        options={roleOptions}
+      >
+      </lightning-combobox>
+      <lightning-input
+        name="Skills"
+        label="Skills"
+        placeholder="Skills"
+        required
+        onchange={handleChange}
+      >
+      </lightning-input>
+      <lightning-button
+        label="Submit"
+        variant="brand"
+        onclick={createAccount}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

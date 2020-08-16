@@ -1,0 +1,27 @@
+<template>
+  <lightning-card
+    title="Team List"
+    icon-name="standard:account"
+    variant="Narrow"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-combobox
+        name="Team"
+        label="Team"
+        placeholder="Choose Team"
+        value={value}
+        onchange={handleChange}
+        options={roleOptions}
+      >
+      </lightning-combobox>
+    </div>
+  </lightning-card>
+
+  <lightning-card title="TeamList" icon-name="custom:custom14">
+    <template if:true={teamMember} for:each={teamMember} for:item="member">
+      <li key={member.Id}>
+        {member.Name} {member.Skills}
+      </li>
+    </template>
+  </lightning-card>
+</template>
